@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 
 namespace ePlan.TileCalculator.Model.Patterns
 {
@@ -7,6 +8,7 @@ namespace ePlan.TileCalculator.Model.Patterns
 	/// nor offset).
 	/// It will not attempt to use offcuts to minimize waste.
 	/// </summary>
+	[Export(typeof(IPattern))]
 	public class StandardPattern : IPattern
 	{
 		/// <summary>

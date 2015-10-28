@@ -1,9 +1,12 @@
-﻿namespace ePlan.TileCalculator.Model.Patterns
+﻿using System.ComponentModel.Composition;
+
+namespace ePlan.TileCalculator.Model.Patterns
 {
 	/// <summary>
 	/// This class will attempt to calculate tile usage.  Tile placement is normal (not diagonal, nor offset).
 	/// However, this calculation will use offcuts where possible to minimize waste.
 	/// </summary>
+	[Export(typeof(IPattern))]
 	public class SmartStandardPattern : StandardPattern, IPattern
 	{
 		/// <summary>

@@ -3,9 +3,13 @@ using ePlan.TileCalculator.Model.Patterns;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Composition;
+using System.ComponentModel.Composition.Hosting;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,16 +21,29 @@ namespace ePlan.TileCalculator.UI
 		public Form1()
 		{
 			InitializeComponent();
+
+			var catalog = new AggregateCatalog();
+			catalog.Catalogs.Add(new AssemblyCatalog(typeof(Form1).Assembly));
+			catalog.Catalogs.Add(new DirectoryCatalog(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)));
+			PatternContainer = new CompositionContainer(catalog);
+
+			try
+			{
+				PatternContainer.ComposeParts(this);
+			}
+			catch (CompositionException compositionException)
+			{
+				throw new Exception(compositionException.ToString());
+			}
 		}
 
+		private CompositionContainer PatternContainer { get; set; }
+
+		[ImportMany(typeof(IPattern))]
 		public List<IPattern> Patterns { get; set; }
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Patterns = new List<IPattern>();
-			Patterns.Add(new StandardPattern());
-			Patterns.Add(new SmartStandardPattern());
-
 			cmbPattern.DataSource = Patterns;
 			cmbPattern.DisplayMember = "Name";
 		}
