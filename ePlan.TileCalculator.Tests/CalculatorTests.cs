@@ -2,6 +2,7 @@
 using ePlan.TileCalculator.Model;
 using ePlan.TileCalculator.Model.Patterns;
 using System.Diagnostics.CodeAnalysis;
+using ePlan.TileCalculator.SmartStandardPatter;
 
 namespace ePlan.TileCalculator.Tests
 {

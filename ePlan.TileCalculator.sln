@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePlan.TileCalculator.Model"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePlan.TileCalculator.UI", "ePlan.TileCalculator.UI\ePlan.TileCalculator.UI.csproj", "{5044B426-8D67-4FCD-8C0B-578EEA6A624D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePlan.TileCalculator.SmartStandardPattern", "ePlan.TileCalculator.SmartStandardPattern\ePlan.TileCalculator.SmartStandardPattern.csproj", "{948B08C2-4FFD-47B8-BF5A-9B42F0605472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5044B426-8D67-4FCD-8C0B-578EEA6A624D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5044B426-8D67-4FCD-8C0B-578EEA6A624D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5044B426-8D67-4FCD-8C0B-578EEA6A624D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948B08C2-4FFD-47B8-BF5A-9B42F0605472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948B08C2-4FFD-47B8-BF5A-9B42F0605472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948B08C2-4FFD-47B8-BF5A-9B42F0605472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948B08C2-4FFD-47B8-BF5A-9B42F0605472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

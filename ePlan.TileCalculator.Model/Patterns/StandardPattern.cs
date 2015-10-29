@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ePlan.TileCalculator.Model;
+using ePlan.TileCalculator.Model.Patterns;
+using System;
 using System.ComponentModel.Composition;
 
 namespace ePlan.TileCalculator.Model.Patterns

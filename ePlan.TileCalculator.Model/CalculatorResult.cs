@@ -27,18 +27,18 @@ namespace ePlan.TileCalculator.Model
 			}
 		}
 
-		public Tile Tile { get; internal set; }
+		public Tile Tile { get; set; }
 		/// <summary>
 		/// Gets the number of whole tiles used based on the pattern
 		/// and area of the room provided.
 		/// </summary>
-		public int WholeTilesUsed { get; internal set; }
+		public int WholeTilesUsed { get; set; }
 
 		/// <summary>
 		/// Gets the total number of cuts made during the tiling operation.
 		/// Cuts are incremented by adding offcuts to the Offcuts collection.
 		/// </summary>
-		public int TotalCuts { get; internal set; }
+		public int TotalCuts { get; set; }
 
 		/// <summary>
 		/// Gets the total waste percentage as the amount of tiling that was offcut

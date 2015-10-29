@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76266050-7DB5-416A-8AC5-EE8EF446D029}</ProjectGuid>
+    <ProjectGuid>{948B08C2-4FFD-47B8-BF5A-9B42F0605472}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ePlan.TileCalculator.Model</RootNamespace>
-    <AssemblyName>ePlan.TileCalculator.Model</AssemblyName>
+    <RootNamespace>ePlan.TileCalculator.SmartStandardPattern</RootNamespace>
+    <AssemblyName>ePlan.TileCalculator.SmartStandardPattern</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,17 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Area.cs" />
-    <Compile Include="CalculatorResult.cs" />
-    <Compile Include="Patterns\IPattern.cs" />
-    <Compile Include="Patterns\StandardPattern.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room.cs" />
-    <Compile Include="Tile.cs" />
+    <Compile Include="SmartStandardPattern.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ePlan.TileCalculator.Model.cd" />
+    <ProjectReference Include="..\ePlan.TileCalculator.Model\ePlan.TileCalculator.Model.csproj">
+      <Project>{76266050-7db5-416a-8ac5-ee8ef446d029}</Project>
+      <Name>ePlan.TileCalculator.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

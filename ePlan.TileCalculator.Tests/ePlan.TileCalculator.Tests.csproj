@@ -61,6 +61,10 @@
       <Project>{76266050-7db5-416a-8ac5-ee8ef446d029}</Project>
       <Name>ePlan.TileCalculator.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ePlan.TileCalculator.SmartStandardPattern\ePlan.TileCalculator.SmartStandardPattern.csproj">
+      <Project>{948b08c2-4ffd-47b8-bf5a-9b42f0605472}</Project>
+      <Name>ePlan.TileCalculator.SmartStandardPattern</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

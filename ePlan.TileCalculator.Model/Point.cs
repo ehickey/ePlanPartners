@@ -3,7 +3,7 @@
 namespace ePlan.TileCalculator.Model
 {
 	[DebuggerDisplay("({X}, {Y})")]
-	struct Point
+	public struct Point
 	{
 
 		public Point(double x, double y)

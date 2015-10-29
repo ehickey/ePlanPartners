@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ePlan.TileCalculator.Model;
 using System.Diagnostics.CodeAnalysis;
 using ePlan.TileCalculator.Model.Patterns;
+using ePlan.TileCalculator.SmartStandardPatter;
 
 namespace ePlan.TileCalculator.Tests
 {

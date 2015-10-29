@@ -1,13 +1,15 @@
-﻿using System.ComponentModel.Composition;
+﻿using ePlan.TileCalculator.Model;
+using ePlan.TileCalculator.Model.Patterns;
+using System.ComponentModel.Composition;
 
-namespace ePlan.TileCalculator.Model.Patterns
+namespace ePlan.TileCalculator.SmartStandardPatter
 {
 	/// <summary>
 	/// This class will attempt to calculate tile usage.  Tile placement is normal (not diagonal, nor offset).
 	/// However, this calculation will use offcuts where possible to minimize waste.
 	/// </summary>
 	[Export(typeof(IPattern))]
-	public class SmartStandardPattern : StandardPattern, IPattern
+	public class SmartStandardPattern : IPattern
 	{
 		/// <summary>
 		/// Used by the UI to display a consumer-friendly name in the drop down.
@@ -21,11 +23,26 @@ namespace ePlan.TileCalculator.Model.Patterns
 		}
 
 		/// <summary>
+		/// The area of the room to be tiled.
+		/// </summary>
+		protected Room Room { get; set; }
+
+		/// <summary>
+		/// The tile size that will be used to tile the room.
+		/// </summary>
+		protected Tile Tile { get; set; }
+
+		/// <summary>
+		/// The grout thickness between each tile.
+		/// </summary>
+		public double GroutThickness { get; set; }
+
+		/// <summary>
 		/// Calculates the number of whole tiles used, along with the number of cuts
 		/// and the total waste percentage.
 		/// </summary>
 		/// <returns>An instance of CalculatorResult.</returns>
-		public override CalculatorResult Calculate(Room room, Tile tile, double groutThickness)
+		public CalculatorResult Calculate(Room room, Tile tile, double groutThickness)
 		{
 			Room = room;
 			Tile = tile;
